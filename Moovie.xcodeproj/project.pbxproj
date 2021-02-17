@@ -15,6 +15,8 @@
 		13A86C6325DD802100FC7515 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13A86C6225DD802100FC7515 /* GoogleService-Info.plist */; };
 		13A86C7B25DD89B100FC7515 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C7A25DD89B100FC7515 /* Constant.swift */; };
 		13A86C8825DD925F00FC7515 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C8725DD925F00FC7515 /* SplashScreenController.swift */; };
+		13A86C8F25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C8E25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift */; };
+		13A86CA325DDBB1800FC7515 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86CA225DDBB1800FC7515 /* AppConstants.swift */; };
 		C56BC6B04F65E384B4D0A019 /* Pods_Moovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		13A86C6225DD802100FC7515 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13A86C7A25DD89B100FC7515 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		13A86C8725DD925F00FC7515 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
+		13A86C8E25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRemoteConfigs.swift; sourceTree = "<group>"; };
+		13A86CA225DDBB1800FC7515 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		1599A86C2B3FB388E9AD35FB /* Pods-Moovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.debug.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.debug.xcconfig"; sourceTree = "<group>"; };
 		B45C36A2DEEEAEA5255D1DC5 /* Pods-Moovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.release.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.release.xcconfig"; sourceTree = "<group>"; };
 		E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				13A86C6225DD802100FC7515 /* GoogleService-Info.plist */,
+				13A86C8D25DD9FAF00FC7515 /* Helpers */,
 				13A86C7425DD897A00FC7515 /* Models */,
 				13A86C7625DD898400FC7515 /* Networking */,
 				13A86C7725DD898D00FC7515 /* Resources */,
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				13A86C7A25DD89B100FC7515 /* Constant.swift */,
+				13A86CA225DDBB1800FC7515 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				13A86C8725DD925F00FC7515 /* SplashScreenController.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		13A86C8D25DD9FAF00FC7515 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C8E25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		79741F80E30109F43C07E65F /* Pods */ = {
@@ -291,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A86C8F25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift in Sources */,
 				13A86C4F25DC752600FC7515 /* HomeController.swift in Sources */,
 				13A86C4B25DC752600FC7515 /* AppDelegate.swift in Sources */,
 				13A86C4D25DC752600FC7515 /* SceneDelegate.swift in Sources */,
+				13A86CA325DDBB1800FC7515 /* AppConstants.swift in Sources */,
 				13A86C7B25DD89B100FC7515 /* Constant.swift in Sources */,
 				13A86C8825DD925F00FC7515 /* SplashScreenController.swift in Sources */,
 			);

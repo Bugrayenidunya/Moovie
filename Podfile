@@ -11,5 +11,6 @@ target 'Moovie' do
   pod 'Alamofire', '~> 5.2'
   pod 'Kingfisher', '~> 5.0'
   pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
 
 end
