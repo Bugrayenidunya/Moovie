@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		13A86C4B25DC752600FC7515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C4A25DC752600FC7515 /* AppDelegate.swift */; };
 		13A86C4D25DC752600FC7515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C4C25DC752600FC7515 /* SceneDelegate.swift */; };
-		13A86C4F25DC752600FC7515 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C4E25DC752600FC7515 /* ViewController.swift */; };
-		13A86C5225DC752600FC7515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A86C5025DC752600FC7515 /* Main.storyboard */; };
+		13A86C4F25DC752600FC7515 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C4E25DC752600FC7515 /* HomeController.swift */; };
 		13A86C5425DC752900FC7515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A86C5325DC752900FC7515 /* Assets.xcassets */; };
 		13A86C5725DC752900FC7515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A86C5525DC752900FC7515 /* LaunchScreen.storyboard */; };
 		13A86C6325DD802100FC7515 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13A86C6225DD802100FC7515 /* GoogleService-Info.plist */; };
+		13A86C7B25DD89B100FC7515 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C7A25DD89B100FC7515 /* Constant.swift */; };
+		13A86C8825DD925F00FC7515 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86C8725DD925F00FC7515 /* SplashScreenController.swift */; };
 		C56BC6B04F65E384B4D0A019 /* Pods_Moovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +22,13 @@
 		13A86C4725DC752600FC7515 /* Moovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A86C4A25DC752600FC7515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A86C4C25DC752600FC7515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13A86C4E25DC752600FC7515 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		13A86C5125DC752600FC7515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13A86C4E25DC752600FC7515 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		13A86C5325DC752900FC7515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A86C5625DC752900FC7515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A86C5825DC752900FC7515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A86C6225DD802100FC7515 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13A86C7A25DD89B100FC7515 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		13A86C8725DD925F00FC7515 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		1599A86C2B3FB388E9AD35FB /* Pods-Moovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.debug.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.debug.xcconfig"; sourceTree = "<group>"; };
 		B45C36A2DEEEAEA5255D1DC5 /* Pods-Moovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.release.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.release.xcconfig"; sourceTree = "<group>"; };
 		E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,16 +67,97 @@
 		13A86C4925DC752600FC7515 /* Moovie */ = {
 			isa = PBXGroup;
 			children = (
+				13A86C6225DD802100FC7515 /* GoogleService-Info.plist */,
+				13A86C7425DD897A00FC7515 /* Models */,
+				13A86C7625DD898400FC7515 /* Networking */,
+				13A86C7725DD898D00FC7515 /* Resources */,
+				13A86C7E25DD89CF00FC7515 /* Supports */,
+				13A86C7825DD899A00FC7515 /* UI */,
+				13A86C7525DD897F00FC7515 /* Utilities */,
+			);
+			path = Moovie;
+			sourceTree = "<group>";
+		};
+		13A86C7425DD897A00FC7515 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13A86C7525DD897F00FC7515 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C7925DD89A100FC7515 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		13A86C7625DD898400FC7515 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		13A86C7725DD898D00FC7515 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C5325DC752900FC7515 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13A86C7825DD899A00FC7515 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C8025DD91C900FC7515 /* Home */,
+				13A86C8225DD91D800FC7515 /* SplashScreen */,
+				13A86C8125DD91CE00FC7515 /* Storyboards */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		13A86C7925DD89A100FC7515 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C7A25DD89B100FC7515 /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		13A86C7E25DD89CF00FC7515 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
 				13A86C5825DC752900FC7515 /* Info.plist */,
 				13A86C4A25DC752600FC7515 /* AppDelegate.swift */,
 				13A86C4C25DC752600FC7515 /* SceneDelegate.swift */,
-				13A86C4E25DC752600FC7515 /* ViewController.swift */,
-				13A86C5325DC752900FC7515 /* Assets.xcassets */,
-				13A86C5525DC752900FC7515 /* LaunchScreen.storyboard */,
-				13A86C5025DC752600FC7515 /* Main.storyboard */,
-				13A86C6225DD802100FC7515 /* GoogleService-Info.plist */,
 			);
-			path = Moovie;
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		13A86C8025DD91C900FC7515 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C4E25DC752600FC7515 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		13A86C8125DD91CE00FC7515 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C5525DC752900FC7515 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		13A86C8225DD91D800FC7515 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				13A86C8725DD925F00FC7515 /* SplashScreenController.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 		79741F80E30109F43C07E65F /* Pods */ = {
@@ -83,7 +166,6 @@
 				1599A86C2B3FB388E9AD35FB /* Pods-Moovie.debug.xcconfig */,
 				B45C36A2DEEEAEA5255D1DC5 /* Pods-Moovie.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,7 +239,6 @@
 				13A86C5725DC752900FC7515 /* LaunchScreen.storyboard in Resources */,
 				13A86C6325DD802100FC7515 /* GoogleService-Info.plist in Resources */,
 				13A86C5425DC752900FC7515 /* Assets.xcassets in Resources */,
-				13A86C5225DC752600FC7515 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,23 +291,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A86C4F25DC752600FC7515 /* ViewController.swift in Sources */,
+				13A86C4F25DC752600FC7515 /* HomeController.swift in Sources */,
 				13A86C4B25DC752600FC7515 /* AppDelegate.swift in Sources */,
 				13A86C4D25DC752600FC7515 /* SceneDelegate.swift in Sources */,
+				13A86C7B25DD89B100FC7515 /* Constant.swift in Sources */,
+				13A86C8825DD925F00FC7515 /* SplashScreenController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		13A86C5025DC752600FC7515 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13A86C5125DC752600FC7515 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13A86C5525DC752900FC7515 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,16 +436,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RMTY324S26;
-				INFOPLIST_FILE = Moovie/Info.plist;
+				INFOPLIST_FILE = Moovie/Supports/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugrayenidunya.Moovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,16 +459,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RMTY324S26;
-				INFOPLIST_FILE = Moovie/Info.plist;
+				INFOPLIST_FILE = Moovie/Supports/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugrayenidunya.Moovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
