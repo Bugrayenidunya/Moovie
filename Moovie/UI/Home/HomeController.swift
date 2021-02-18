@@ -8,12 +8,32 @@
 import UIKit
 
 class HomeController: UIViewController {
-
+    
+    // MARK: Properties
+    
+    
+    // MARK: Views
+    
+    
+    // MARK: Lifecycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Inits
+        configureUI()
     }
-
-
+    
+    // MARK: Actions
+    
+    
+    // MARK: Functions
+    
+    private func configureUI() {
+        view.backgroundColor = .white
+        navigationItem.title = "Home"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
 }
 
