@@ -23,6 +23,8 @@
 		13A86CC425DEEF0A00FC7515 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86CC325DEEF0A00FC7515 /* SearchResponse.swift */; };
 		13A86CC725DEEF3700FC7515 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86CC625DEEF3700FC7515 /* Search.swift */; };
 		13A86CCE25DEFAB200FC7515 /* FindByIdRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86CCD25DEFAB200FC7515 /* FindByIdRequestModel.swift */; };
+		13A86CDB25DEFFD400FC7515 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86CDA25DEFFD400FC7515 /* ServiceManager.swift */; };
+		13A86CE025DF019400FC7515 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86CDF25DF019400FC7515 /* Services.swift */; };
 		C56BC6B04F65E384B4D0A019 /* Pods_Moovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		13A86CC325DEEF0A00FC7515 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		13A86CC625DEEF3700FC7515 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		13A86CCD25DEFAB200FC7515 /* FindByIdRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByIdRequestModel.swift; sourceTree = "<group>"; };
+		13A86CDA25DEFFD400FC7515 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = ../../../../../../Documents/ServiceManager.swift; sourceTree = "<group>"; };
+		13A86CDF25DF019400FC7515 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Services.swift; path = ../../../../../../Documents/Services.swift; sourceTree = "<group>"; };
 		1599A86C2B3FB388E9AD35FB /* Pods-Moovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.debug.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.debug.xcconfig"; sourceTree = "<group>"; };
 		B45C36A2DEEEAEA5255D1DC5 /* Pods-Moovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.release.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.release.xcconfig"; sourceTree = "<group>"; };
 		E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,7 @@
 			children = (
 				13A86C6225DD802100FC7515 /* GoogleService-Info.plist */,
 				13A86CA925DDC81700FC7515 /* Models */,
+				13A86CD825DEFEBC00FC7515 /* Networking */,
 				13A86C7725DD898D00FC7515 /* Resources */,
 				13A86C7E25DD89CF00FC7515 /* Supports */,
 				13A86C7825DD899A00FC7515 /* UI */,
@@ -190,6 +195,31 @@
 				13A86CC325DEEF0A00FC7515 /* SearchResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		13A86CD825DEFEBC00FC7515 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				13A86CD925DEFFCC00FC7515 /* Manager */,
+				13A86CDE25DF018D00FC7515 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		13A86CD925DEFFCC00FC7515 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				13A86CDA25DEFFD400FC7515 /* ServiceManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		13A86CDE25DF018D00FC7515 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				13A86CDF25DF019400FC7515 /* Services.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		79741F80E30109F43C07E65F /* Pods */ = {
@@ -328,10 +358,12 @@
 				13A86C4B25DC752600FC7515 /* AppDelegate.swift in Sources */,
 				13A86CBC25DE576600FC7515 /* Rating.swift in Sources */,
 				13A86CB925DE574A00FC7515 /* Movie.swift in Sources */,
+				13A86CDB25DEFFD400FC7515 /* ServiceManager.swift in Sources */,
 				13A86C4D25DC752600FC7515 /* SceneDelegate.swift in Sources */,
 				13A86CCE25DEFAB200FC7515 /* FindByIdRequestModel.swift in Sources */,
 				13A86CBF25DE636E00FC7515 /* SearchByTitleRequestModel.swift in Sources */,
 				13A86CB425DDCB3400FC7515 /* EndpointConstants.swift in Sources */,
+				13A86CE025DF019400FC7515 /* Services.swift in Sources */,
 				13A86C7B25DD89B100FC7515 /* Constant.swift in Sources */,
 				13A86CC425DEEF0A00FC7515 /* SearchResponse.swift in Sources */,
 				13A86CB125DDC95500FC7515 /* RequestModel.swift in Sources */,
