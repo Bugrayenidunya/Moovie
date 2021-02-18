@@ -102,26 +102,12 @@
 			path = Moovie;
 			sourceTree = "<group>";
 		};
-		13A86C7425DD897A00FC7515 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		13A86C7525DD897F00FC7515 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				13A86C7925DD89A100FC7515 /* Constants */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		13A86C7625DD898400FC7515 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		13A86C7725DD898D00FC7515 /* Resources */ = {
@@ -146,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				13A86C7A25DD89B100FC7515 /* Constant.swift */,
+				13A86CB325DDCB3400FC7515 /* EndpointConstants.swift */,
 				13A86CA225DDBB1800FC7515 /* AppConstants.swift */,
 			);
 			path = Constants;
@@ -185,12 +172,34 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
-		13A86C8D25DD9FAF00FC7515 /* Helpers */ = {
+		13A86CA925DDC81700FC7515 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				13A86C8E25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift */,
+				13A86CCA25DEF9C500FC7515 /* Request */,
+				13A86CCC25DEF9E900FC7515 /* Response */,
 			);
-			path = Helpers;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13A86CCA25DEF9C500FC7515 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				13A86CB025DDC95500FC7515 /* RequestModel.swift */,
+				13A86CCD25DEFAB200FC7515 /* FindByIdRequestModel.swift */,
+				13A86CBE25DE636E00FC7515 /* SearchByTitleRequestModel.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		13A86CCC25DEF9E900FC7515 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				13A86CB825DE574A00FC7515 /* Movie.swift */,
+				13A86CBB25DE576600FC7515 /* Rating.swift */,
+				13A86CC625DEEF3700FC7515 /* Search.swift */,
+				13A86CC325DEEF0A00FC7515 /* SearchResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		13A86CD825DEFEBC00FC7515 /* Networking */ = {
@@ -349,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A86CC725DEEF3700FC7515 /* Search.swift in Sources */,
 				13A86C8F25DD9FD500FC7515 /* FirebaseRemoteConfigs.swift in Sources */,
 				13A86C4F25DC752600FC7515 /* HomeController.swift in Sources */,
 				13A86C4B25DC752600FC7515 /* AppDelegate.swift in Sources */,
@@ -362,6 +372,8 @@
 				13A86CE025DF019400FC7515 /* Services.swift in Sources */,
 				13A86CA325DDBB1800FC7515 /* AppConstants.swift in Sources */,
 				13A86C7B25DD89B100FC7515 /* Constant.swift in Sources */,
+				13A86CC425DEEF0A00FC7515 /* SearchResponse.swift in Sources */,
+				13A86CB125DDC95500FC7515 /* RequestModel.swift in Sources */,
 				13A86C8825DD925F00FC7515 /* SplashScreenController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
