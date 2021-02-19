@@ -58,7 +58,8 @@ class SplashScreenController: UIViewController {
                 self.splashGreetingLabel.isHidden = false
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    self.view.window?.rootViewController = UINavigationController(rootViewController: HomeController())
+                    let vc = HomeControllerBuilder().build()
+                    self.view.window?.rootViewController = UINavigationController(rootViewController: vc)
                     self.view.window?.makeKeyAndVisible()
                 }
                 

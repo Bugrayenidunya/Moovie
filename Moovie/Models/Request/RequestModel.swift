@@ -34,7 +34,6 @@ class RequestModel: NSObject, Codable {
         ]
     }
     
-    
 }
 
 // MARK: - Extension
@@ -50,7 +49,7 @@ extension RequestModel {
             }
         }
         
-        var request: URLRequest = URLRequest(url: URL(string: endpoint)!)
+        var request: URLRequest = URLRequest(url: URL(endpoint))
         
         request.httpMethod = method.rawValue
         
