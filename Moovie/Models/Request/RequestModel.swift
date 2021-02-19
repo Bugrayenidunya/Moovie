@@ -30,7 +30,7 @@ class RequestModel: NSObject, Codable {
     
     var headers: [String: String] {
         return [
-            "Content-Type": "application/json"
+            "Content-Type": "application/json; charset=utf-8"
         ]
     }
     
@@ -48,6 +48,9 @@ extension RequestModel {
                 endpoint.append("&\(parameter.key)=\(value)")
             }
         }
+        
+        // Replacing whitespaces with the '%20' for multiple word querying
+        endpoint = endpoint.replacingOccurrences(of: " ", with: "%20")
         
         var request: URLRequest = URLRequest(url: URL(endpoint))
         
