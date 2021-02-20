@@ -16,7 +16,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     // MARK: Views
     
     lazy var imageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 88, height: 88))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -56,7 +56,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imageView.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.snp.centerY)
             make.leading.equalTo(self.snp.leading).offset(8)
-            make.height.width.equalTo(88)
+            make.height.width.equalTo(120)
         }
         
         titleLabel.snp.makeConstraints { (make) in
