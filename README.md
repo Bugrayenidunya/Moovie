@@ -13,7 +13,7 @@ You don't need any special configuration. Just clone project or download to zip 
  
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/54468032/108593790-cc941200-7386-11eb-89b5-313ae66b74b8.png" width="200" height="433">
+<img src="https://user-images.githubusercontent.com/54468032/108593790-cc941200-7386-11eb-89b5-313ae66b74b8.png" width="500" height="433">
  
 ## Author
 Enes Buğra Yenidünya - bugrayenidunya@gmail.com 
