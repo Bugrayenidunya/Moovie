@@ -36,6 +36,7 @@
 		13A86D7625E04F9E00FC7515 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86D7525E04F9E00FC7515 /* DetailViewModel.swift */; };
 		13A86D7925E04FB100FC7515 /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A86D7825E04FB100FC7515 /* DetailControllerBuilder.swift */; };
 		13CEE18325E117A200B39C8C /* AnalyticsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEE18225E117A200B39C8C /* AnalyticsConstants.swift */; };
+		13CEE19A25E123B300B39C8C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEE19925E123B300B39C8C /* UIViewController+Extension.swift */; };
 		C56BC6B04F65E384B4D0A019 /* Pods_Moovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		13A86D7525E04F9E00FC7515 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		13A86D7825E04FB100FC7515 /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
 		13CEE18225E117A200B39C8C /* AnalyticsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConstants.swift; sourceTree = "<group>"; };
+		13CEE19925E123B300B39C8C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		1599A86C2B3FB388E9AD35FB /* Pods-Moovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.debug.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.debug.xcconfig"; sourceTree = "<group>"; };
 		B45C36A2DEEEAEA5255D1DC5 /* Pods-Moovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.release.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.release.xcconfig"; sourceTree = "<group>"; };
 		E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +275,7 @@
 			children = (
 				13A86D6025E02D2200FC7515 /* UIView+Extension.swift */,
 				13A86D6425E035B500FC7515 /* URL+Extension.swift */,
+				13CEE19925E123B300B39C8C /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CEE19A25E123B300B39C8C /* UIViewController+Extension.swift in Sources */,
 				13A86D6125E02D2200FC7515 /* UIView+Extension.swift in Sources */,
 				13A86CC725DEEF3700FC7515 /* Search.swift in Sources */,
 				13A86D4425DFC1BD00FC7515 /* HomeViewModel.swift in Sources */,
