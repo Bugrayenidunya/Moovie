@@ -23,17 +23,14 @@ class ServiceManager {
                 if let error = response.error {
                     completion(Result.failure(error))
                 }
-                
                 return
             }
-            
             
             guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
+                print("Response Decode Error", #line, #file)
                 return
             }
-            
             completion(Result.success(decodedResponse))
-            
         }
     }
     
