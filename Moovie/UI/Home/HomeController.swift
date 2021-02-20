@@ -94,6 +94,8 @@ class HomeController: UIViewController {
     }
     
     private func configureUI() {
+        hideKeyboardWhenTappedAround()
+        
         view.backgroundColor = .white
         navigationItem.title = "Home"
         navigationController?.navigationBar.prefersLargeTitles = true
