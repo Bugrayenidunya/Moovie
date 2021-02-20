@@ -16,7 +16,6 @@ struct Movie: Codable {
     var actors, plot, language, country: String?
     var awards: String?
     var poster: String?
-    var ratings: [Rating]?
     var metascore, imdbRating, imdbVotes, imdbID: String?
     var type, dvd, boxOffice, production: String?
     var website, response: String?
@@ -38,7 +37,6 @@ struct Movie: Codable {
         case country = "Country"
         case awards = "Awards"
         case poster = "Poster"
-        case ratings = "Ratings"
         case metascore = "Metascore"
         case imdbRating, imdbVotes, imdbID
         case type = "Type"
