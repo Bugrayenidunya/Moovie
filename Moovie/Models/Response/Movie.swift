@@ -48,3 +48,28 @@ struct Movie: Codable {
     }
     
 }
+
+// MARK: - Analytics
+
+extension Movie {
+    
+    enum Analytics: String {
+        case title
+        case imdbRating
+        case reviewCount
+        case released
+        case director
+        case null
+    }
+    
+    var movieToAnalytics: [String : Any] {
+        return [
+            Analytics.title.rawValue: self.title ?? Analytics.null.rawValue,
+            Analytics.imdbRating.rawValue: self.imdbRating ?? Analytics.null.rawValue,
+            Analytics.reviewCount.rawValue: self.imdbVotes ?? Analytics.null.rawValue,
+            Analytics.released.rawValue: self.released ?? Analytics.null.rawValue,
+            Analytics.director.rawValue: self.released ?? Analytics.null.rawValue
+        ]
+    }
+    
+}

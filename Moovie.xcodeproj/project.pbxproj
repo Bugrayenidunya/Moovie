@@ -40,6 +40,7 @@
 		13CEE1CB25E158B600B39C8C /* SplashScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEE1CA25E158B600B39C8C /* SplashScreenBuilder.swift */; };
 		13CEE1CE25E15A1100B39C8C /* DetailController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEE1CD25E15A1100B39C8C /* DetailController+UI.swift */; };
 		13CEE1D225E166D400B39C8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13CEE1D125E166D400B39C8C /* GoogleService-Info.plist */; };
+		13CEE1D825E16DD600B39C8C /* AnalyticsEventLoger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEE1D725E16DD600B39C8C /* AnalyticsEventLoger.swift */; };
 		C56BC6B04F65E384B4D0A019 /* Pods_Moovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		13CEE1CA25E158B600B39C8C /* SplashScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenBuilder.swift; sourceTree = "<group>"; };
 		13CEE1CD25E15A1100B39C8C /* DetailController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailController+UI.swift"; sourceTree = "<group>"; };
 		13CEE1D125E166D400B39C8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13CEE1D725E16DD600B39C8C /* AnalyticsEventLoger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventLoger.swift; sourceTree = "<group>"; };
 		1599A86C2B3FB388E9AD35FB /* Pods-Moovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.debug.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.debug.xcconfig"; sourceTree = "<group>"; };
 		B45C36A2DEEEAEA5255D1DC5 /* Pods-Moovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovie.release.xcconfig"; path = "Target Support Files/Pods-Moovie/Pods-Moovie.release.xcconfig"; sourceTree = "<group>"; };
 		E739AFBCD6EBC3F076114DA0 /* Pods_Moovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 		13A86C7525DD897F00FC7515 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				13CEE1D625E16DA800B39C8C /* Analytics */,
 				13A86C7925DD89A100FC7515 /* Constants */,
 				13A86D5F25E02D1500FC7515 /* Extensions */,
 				13A86D2B25DF0DE000FC7515 /* RemoteConfigs */,
@@ -202,9 +205,9 @@
 		13A86C8225DD91D800FC7515 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				13CEE1CA25E158B600B39C8C /* SplashScreenBuilder.swift */,
 				13A86C8725DD925F00FC7515 /* SplashScreenController.swift */,
 				13CEE1C725E155BE00B39C8C /* SplashScreenViewModel.swift */,
-				13CEE1CA25E158B600B39C8C /* SplashScreenBuilder.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -267,9 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				13A86D7225E04F9300FC7515 /* DetailController.swift */,
+				13CEE1CD25E15A1100B39C8C /* DetailController+UI.swift */,
 				13A86D7825E04FB100FC7515 /* DetailControllerBuilder.swift */,
 				13A86D7525E04F9E00FC7515 /* DetailViewModel.swift */,
-				13CEE1CD25E15A1100B39C8C /* DetailController+UI.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -281,6 +284,14 @@
 				13CEE1BB25E14A4F00B39C8C /* ServiceManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		13CEE1D625E16DA800B39C8C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				13CEE1D725E16DD600B39C8C /* AnalyticsEventLoger.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		79741F80E30109F43C07E65F /* Pods */ = {
@@ -433,6 +444,7 @@
 				13CEE1BC25E14A4F00B39C8C /* Services.swift in Sources */,
 				13A86CBF25DE636E00FC7515 /* SearchByTitleRequestModel.swift in Sources */,
 				13A86D7625E04F9E00FC7515 /* DetailViewModel.swift in Sources */,
+				13CEE1D825E16DD600B39C8C /* AnalyticsEventLoger.swift in Sources */,
 				13A86CB425DDCB3400FC7515 /* EndpointConstants.swift in Sources */,
 				13A86D4725DFC43D00FC7515 /* UIConstants.swift in Sources */,
 				13A86D7325E04F9300FC7515 /* DetailController.swift in Sources */,

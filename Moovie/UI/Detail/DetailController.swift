@@ -16,7 +16,6 @@ class DetailController: UIViewController {
     
     var movieId: String = ""
     private var viewModel: DetailViewModel!
-    private var movie: Movie?
     
     var scrollView: UIScrollView = {
         let scrolView = UIScrollView()
@@ -165,9 +164,8 @@ private extension DetailController {
             guard let self = self else { return }
             
             self.view.stopIndicatorAnimation()
-            self.movie = self.viewModel?.returnFetchedMovie()
             
-            if let movie = self.movie {
+            if let movie = self.viewModel?.returnFetchedMovie() {
                 self.imageView.kf.setImage(
                     with: URL(movie.poster ?? ""),
                     placeholder: UIImage(named: Constant.UIConstants.noImageFound),
@@ -186,22 +184,10 @@ private extension DetailController {
                 self.plotLabel.text = movie.plot
                 self.directorLabel.text = movie.director
                 
-                self.logMovieDetail(movie: Movie(title: movie.title, released: movie.released, runtime: movie.runtime, genre: movie.genre, director: movie.director, plot: movie.plot, imdbRating: movie.imdbRating, imdbVotes: movie.imdbVotes))
+                AnalyticsEventLoger.logMovieDetail(movie: Movie(title: movie.title, released: movie.released, runtime: movie.runtime, genre: movie.genre, director: movie.director, plot: movie.plot, imdbRating: movie.imdbRating, imdbVotes: movie.imdbVotes))
             }
             
         })
-    }
-    
-    private func logMovieDetail(movie: Movie) {
-        Analytics.logEvent(Constant.AnalyticsConstants.logMovieDetailEvent,
-                      parameters: [
-                        Constant.AnalyticsConstants.title : movie.title ?? Constant.AnalyticsConstants.null,
-                        Constant.AnalyticsConstants.imdbRating : movie.imdbRating ?? Constant.AnalyticsConstants.null,
-                        Constant.AnalyticsConstants.reviewCount: movie.imdbVotes ?? Constant.AnalyticsConstants.null,
-                        Constant.AnalyticsConstants.relased: movie.released ?? Constant.AnalyticsConstants.null,
-                        Constant.AnalyticsConstants.director: movie.director ?? Constant.AnalyticsConstants.null
-                      ]
-        )
     }
     
 }
