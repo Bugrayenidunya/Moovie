@@ -51,7 +51,10 @@ class HomeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        view.startIndicatorAnimation()
+        if movies.count < 1 {
+            view.startIndicatorAnimation()
+        }
+        
     }
     
     // MARK: Actions
@@ -154,7 +157,14 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: - Do This: navigate to detail
+        let movie = movies[indexPath.row]
+        let detailVC = DetailControllerBuilder().build()
+        
+        if let imdbID = movie.imdbID {
+            detailVC.movieId = imdbID
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+        
     }
     
 }
