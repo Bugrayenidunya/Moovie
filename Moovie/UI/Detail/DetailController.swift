@@ -16,7 +16,6 @@ class DetailController: UIViewController {
     
     var movieId: String = ""
     private var viewModel: DetailViewModel!
-    private var movie: Movie?
     
     var scrollView: UIScrollView = {
         let scrolView = UIScrollView()
@@ -165,9 +164,8 @@ private extension DetailController {
             guard let self = self else { return }
             
             self.view.stopIndicatorAnimation()
-            self.movie = self.viewModel?.returnFetchedMovie()
             
-            if let movie = self.movie {
+            if let movie = self.viewModel?.returnFetchedMovie() {
                 self.imageView.kf.setImage(
                     with: URL(movie.poster ?? ""),
                     placeholder: UIImage(named: Constant.UIConstants.noImageFound),

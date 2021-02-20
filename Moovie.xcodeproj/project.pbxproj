@@ -202,9 +202,9 @@
 		13A86C8225DD91D800FC7515 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				13CEE1CA25E158B600B39C8C /* SplashScreenBuilder.swift */,
 				13A86C8725DD925F00FC7515 /* SplashScreenController.swift */,
 				13CEE1C725E155BE00B39C8C /* SplashScreenViewModel.swift */,
-				13CEE1CA25E158B600B39C8C /* SplashScreenBuilder.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -267,9 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				13A86D7225E04F9300FC7515 /* DetailController.swift */,
+				13CEE1CD25E15A1100B39C8C /* DetailController+UI.swift */,
 				13A86D7825E04FB100FC7515 /* DetailControllerBuilder.swift */,
 				13A86D7525E04F9E00FC7515 /* DetailViewModel.swift */,
-				13CEE1CD25E15A1100B39C8C /* DetailController+UI.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
