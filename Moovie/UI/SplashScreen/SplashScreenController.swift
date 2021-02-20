@@ -13,7 +13,6 @@ class SplashScreenController: UIViewController {
     
     // MARK: Properties
     
-    private let monitor = NWPathMonitor()
     private var viewModel: SplashScreenViewModel!
     
     private var splashGreetingLabel: UILabel = {
@@ -26,7 +25,7 @@ class SplashScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkConnectionDidChanged()
+        networkConnectionDidSatisfied()
         configureUI()
     }
     
@@ -56,14 +55,11 @@ private extension SplashScreenController {
         }
     }
     
-    func networkConnectionDidChanged() {
-        let queue = DispatchQueue.main
-        monitor.start(queue: queue)
-        
-        monitor.pathUpdateHandler = { [weak self] path in
-            guard let self = self else {return}
+    func networkConnectionDidSatisfied() {
+        viewModel.networkConnectionDidSatisfied { [weak self] satisfied in
+            guard let self = self else { return }
             
-            if path.status == .satisfied {
+            if satisfied {
                 self.splashGreetingLabel.isHidden = false
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -74,7 +70,6 @@ private extension SplashScreenController {
                 
                 return
             }
-            
             let alert = UIAlertController(title: "Warning", message: "Please check your internet connection.", preferredStyle: .alert)
             self.present(alert, animated: true, completion: nil)
         }
