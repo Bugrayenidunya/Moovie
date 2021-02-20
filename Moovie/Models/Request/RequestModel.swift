@@ -27,7 +27,6 @@ class RequestModel: NSObject, Codable {
     }
     
     /// Header
-    
     var headers: [String: String] {
         return [
             "Content-Type": "application/json; charset=utf-8"
