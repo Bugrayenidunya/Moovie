@@ -15,27 +15,23 @@ class HomeController: UIViewController {
     
     private var movies: [Search] = []
     private var searchTerm: String = ""
-    var viewModel: HomeViewModel?
+    private var viewModel: HomeViewModel!
     
-    // MARK: Views
-    
-    private lazy var collectionView: UICollectionView = {
+    private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset =  UIEdgeInsets(top: 24, left: 16, bottom: 24, right: 16)
         layout.scrollDirection = .vertical
-        let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         return collectionView
     }()
     
-    private lazy var searchBar: UISearchBar = {
+    private var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search for movie.."
         searchBar.autocapitalizationType = .none
         return searchBar
     }()
-    
-    // MARK: Lifecycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +39,6 @@ class HomeController: UIViewController {
         // Default search
         searchMovieByTitle(title: "men")
         
-        // Inits
         configureUI()
         configureCollectionView()
     }
@@ -57,6 +52,16 @@ class HomeController: UIViewController {
         
     }
     
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: Actions
     
     @objc func performSearhTask() {
@@ -67,33 +72,36 @@ class HomeController: UIViewController {
             searchMovieByTitle(title: self.searchTerm)
         }
     }
+
+}
+
+// MARK: - Privates
+
+private extension HomeController {
     
-    // MARK: Functions
-    
-    private func searchMovieByTitle(title: String) {
-        viewModel?.fetchMoviesBySearchTerm(term: title, completion: { [weak self] in
+    func searchMovieByTitle(title: String) {
+        viewModel.fetchMoviesBySearchTerm(term: title, completion: { [weak self] in
             guard let self = self else { return }
             self.view.stopIndicatorAnimation()
             
-            if let searchedMovies = self.viewModel?.returnSearchResult() {
-                self.movies = searchedMovies
-                self.collectionView.reloadData()
+            self.movies = self.viewModel.returnSearchResult()
+            self.collectionView.reloadData()
+            
+            if self.movies.count < 1 {
+                self.view.stopIndicatorAnimation()
+                let alert = UIAlertController(title: "Warning", message: "Result not found, try again.", preferredStyle: .alert)
                 
-                if self.movies.count < 1 {
-                    self.view.stopIndicatorAnimation()
-                    let alert = UIAlertController(title: "Warning", message: "Result not found, try again.", preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
-                        self.searchBar.text = ""
-                    }))
-                    
-                    self.present(alert, animated: true, completion: nil)
-                }
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                    self.searchBar.text = ""
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
             }
+            
         })
     }
     
-    private func configureUI() {
+    func configureUI() {
         hideKeyboardWhenTappedAround()
         
         view.backgroundColor = .white
@@ -119,7 +127,7 @@ class HomeController: UIViewController {
         }
     }
     
-    private func configureCollectionView() {
+    func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: Constant.UIConstants.movieCell)
@@ -160,13 +168,12 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movie = movies[indexPath.row]
-        let detailVC = DetailControllerBuilder().build()
+        let detailVC = DetailControllerBuilder().build(viewModel: DetailViewModel())
         
         if let imdbID = movie.imdbID {
             detailVC.movieId = imdbID
             navigationController?.pushViewController(detailVC, animated: true)
         }
-        
     }
     
 }

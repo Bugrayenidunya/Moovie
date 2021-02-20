@@ -9,9 +9,8 @@ import Foundation
 
 final class DetailControllerBuilder {
     
-    func build() -> DetailController {
-        let vc = DetailController()
-        vc.viewModel = DetailViewModel()
+    func build(viewModel: DetailViewModel) -> DetailController {
+        let vc = DetailController(viewModel: viewModel)
         return vc
     }
     

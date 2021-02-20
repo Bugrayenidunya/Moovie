@@ -9,8 +9,6 @@ import Foundation
 
 class DetailViewModel {
     
-    // MARK: Properties
-    
     private var movie: Movie?
     
     // MARK: Functions

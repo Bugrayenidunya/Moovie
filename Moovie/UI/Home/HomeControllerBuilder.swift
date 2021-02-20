@@ -9,9 +9,8 @@ import Foundation
 
 final class HomeControllerBuilder {
     
-    func build() -> HomeController {
-        let vc = HomeController()
-        vc.viewModel = HomeViewModel(services: Services())
+    func build(viewModel: HomeViewModel) -> HomeController {
+        let vc = HomeController(viewModel: viewModel)
         return vc
     }
     
