@@ -11,14 +11,7 @@ class HomeViewModel {
     
     // MARK: Properties
     
-    private var services: Services?
-    private var movies: [Search]?
-    
-    // MARK: Init
-    
-    init(services: Services) {
-        self.services = services
-    }
+    private var movies: [Search] = []
     
     // MARK: Functions
     
@@ -31,7 +24,7 @@ class HomeViewModel {
                     print(error, #line, #file)
                 case .success(let response):
                     if response.totalResults != nil {
-                        self.movies = response.search
+                        self.movies = response.search!
                         completion()
                     } else {
                         self.movies = []
@@ -41,7 +34,7 @@ class HomeViewModel {
         }
     }
     
-    func returnSearchResult() -> [Search]? {
+    func returnSearchResult() -> [Search] {
         return self.movies
     }
     
